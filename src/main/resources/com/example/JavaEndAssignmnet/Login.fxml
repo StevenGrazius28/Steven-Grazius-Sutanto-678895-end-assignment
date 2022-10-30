@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0"
+      prefWidth="443.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.JavaEndAssignmnet.LoginController">
+    <Button fx:id="loginButton" layoutX="78.0" layoutY="206.0" mnemonicParsing="false" onAction="#OnClickBtnLogin"
+            prefHeight="25.0" prefWidth="156.0" style="-fx-background-color: #3399FF;" text="Login" underline="true"/>
+    <Label layoutX="78.0" layoutY="32.0" opacity="0.51" text="Login">
+        <font>
+            <Font size="38.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="txtUsername" layoutX="78.0" layoutY="97.0" prefHeight="25.0" prefWidth="149.0"
+               promptText="Username"/>
+    <PasswordField fx:id="txtPasswrod" layoutX="78.0" layoutY="138.0" promptText="Password"/>
+    <Label fx:id="txtLoginIdentificator" layoutX="78.0" layoutY="177.0"/>
+</Pane>
+
