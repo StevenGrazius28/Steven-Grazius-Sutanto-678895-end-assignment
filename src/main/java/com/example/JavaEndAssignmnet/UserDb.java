@@ -14,11 +14,11 @@ public class UserDb {
 
     private List<User> Users(){
         List <User> users= new ArrayList<>();
-        users.add(new User(1,"Admin","Smith", LocalDate.of(1997, 4, 12), "Admin123"));
-        users.add(new User(2,"Jack","Tita", LocalDate.of(1997, 4, 12), "Emma123"));
-        users.add(new User(3,"Michael","Jor", LocalDate.of(1997, 4, 12), "Emma123"));
-        users.add(new User(4,"Lisa","BlkP", LocalDate.of(1997, 4, 12), "Emma123"));
-        users.add(new User(5,"Mark","Fb", LocalDate.of(1997, 4, 12), "Emma123"));
+        users.add(new User(1,"Admin","Smith", LocalDate.of(1997, 4, 12), "Admin123",User.userStatus.admin));
+        users.add(new User(2,"Jack","Tita", LocalDate.of(1997, 4, 12), "Emma123",User.userStatus.member));
+        users.add(new User(3,"Michael","Jor", LocalDate.of(1997, 4, 12), "Emma123",User.userStatus.member));
+        users.add(new User(4,"Lisa","BlkP", LocalDate.of(1997, 4, 12), "Emma123",User.userStatus.member));
+        users.add(new User(5,"Mark","Fb", LocalDate.of(1997, 4, 12), "Emma123",User.userStatus.member));
         return  users;
     }
     public User getUser(String username,String password){

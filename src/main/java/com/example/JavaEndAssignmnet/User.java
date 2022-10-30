@@ -5,11 +5,14 @@ import java.time.LocalDate;
 import java.time.Period;
 
 public class User implements Serializable {
-    private final int id;
+    private int id;
     private String firstname;
     private String lastname;
     private LocalDate birthday;
     private String password;
+    private userStatus status;
+    public enum userStatus {member,admin;}
+
     public int getId(){ return id;}
     public LocalDate getBirthday(){return birthday;}
 
@@ -29,15 +32,19 @@ public class User implements Serializable {
     public int getUserId(){
         return id;
     }
+    public userStatus getStatus(){
+        return status;
+    }
     public String getFullname(User user){
         return user.getFirstname()+ " "+ user.getLastname();
     }
-    public User(int id, String firstName, String lastName, LocalDate birthdate, String password) {
+    public User(int id, String firstName, String lastName, LocalDate birthdate, String password, userStatus status) {
         this.id = id;
         this.firstname = firstName;
         this.lastname = lastName;
         this.birthday = birthdate;
         int Age = Period.between(birthday, LocalDate.now()).getYears();
         this.password = password;
+        this.status = status;
     }
 }

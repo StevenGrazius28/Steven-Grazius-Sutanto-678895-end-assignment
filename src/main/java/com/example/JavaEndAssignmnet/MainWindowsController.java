@@ -206,7 +206,7 @@ public class MainWindowsController implements Initializable{
                 if (u.getId()> biggestId)
                     biggestId = u.getId();
             }
-            User user = new User(biggestId+1, textFieldMemberFirstname.getText(), textFieldMemberLastname.getText(), DatepickerMemberBirthday.getValue(), textFieldMemberFirstname + "123");
+            User user = new User(biggestId+1, textFieldMemberFirstname.getText(), textFieldMemberLastname.getText(), DatepickerMemberBirthday.getValue(), textFieldMemberFirstname + "123", User.userStatus.member);
             userDb.users.add(user);
             ObservableList<User> users = tableviewUser.getItems();
             users.add(user);
@@ -322,5 +322,6 @@ public class MainWindowsController implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         hideAndShowItems(1);
+        userDb.write();
     }
 }
